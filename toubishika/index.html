@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="投币式咖啡机是一种24小时无人值守的自动售货设备，适合便利店、工厂、学校等场所使用。本站提供投币咖啡机选购指南、运营维护技巧、商用咖啡机价格对比及常见故障排查。">
+    <meta name="keywords" content="投币式咖啡机,商用咖啡机,无人售货机,24小时咖啡机,咖啡机价格">
+    <title>投币式咖啡机-商用无人售货与24小时运营解决方案</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4a3b32;
+            --secondary-color: #8c6b5a;
+            --accent-color: #d4a373;
+            --bg-color: #fdfbf7;
+            --card-bg: #ffffff;
+            --text-main: #2c2c2c;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border-radius: var(--border-radius);
+            background-color: var(--bg-color);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Application Scenarios */
+        .scenarios {
+            padding: 60px 0;
+        }
+
+        .scenario-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .scenario-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+        }
+
+        .check-icon {
+            color: #28a745;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* Equipment Guide */
+        .guide {
+            padding: 60px 0;
+            background-color: white;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .guide-content h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .guide-content ul {
+            margin-top: 20px;
+        }
+
+        .guide-content li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .guide-content li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        .guide-image {
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed #ddd;
+            color: #999;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+            background-color: #fff;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-wrapper { flex-direction: column; height: auto; padding: 15px 0; gap: 15px; }
+            nav ul { gap: 15px; font-size: 0.9rem; }
+            .guide-container { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">投币<span>咖啡机</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#features">核心优势</a></li>
+                    <li><a href="#scenarios">适用场景</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-btn">获取报价</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>24小时无人值守<br>您的全天候咖啡服务商</h1>
+                <p>专为高人流量场所设计的全自动投币咖啡机，支持微信/支付宝/投币多种支付方式，降低人工成本，提升客户体验。</p>
+                <div class="hero-buttons">
+                    <a href="#guide" class="cta-btn">了解设备详情</a>
+                    <a href="#scenarios" class="btn-outline">查看应用场景</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">为什么选择投币式咖啡机？</h2>
+                <p class="section-subtitle">从传统人工售卖到智能化自助服务，我们为您提供全方位的解决方案。</p>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>降低运营成本</h3>
+                        <p>无需雇佣咖啡师，24小时自动出杯，大幅减少人力开支和排班管理难度。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>全天候服务</h3>
+                        <p>支持24小时不间断营业，满足夜间加班、早班通勤等特殊时段的饮用需求。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>智能支付系统</h3>
+                        <p>兼容现金投币、微信、支付宝等多种支付方式，扫码即可一键出杯，交易安全便捷。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>设备安全防护</h3>
+                        <p>配备防溢出、缺水保护、温度控制等多重安全机制，确保设备长期稳定运行。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>数据实时监控</h3>
+                        <p>后台管理系统实时查看销量、库存及设备状态，让您经营一目了然。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">☕</div>
+                        <h3>专业咖啡品质</h3>
+                        <p>采用专业萃取技术，保留咖啡豆原始香气，提供媲美人工现磨的口感体验。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scenarios Section -->
+        <section id="scenarios" class="scenarios">
+            <div class="container">
+                <h2 class="section-title">适用场景广泛</h2>
+                <p class="section-subtitle">无论您是何种业态，投币式咖啡机都能成为提升服务的利器。</p>
+                <div class="scenario-list">
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>企业办公楼</h4>
+                            <p>解决员工下午茶需求，提升企业福利与员工满意度。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>工厂与工业园区</h4>
+                            <p>24小时供应，满足夜班工人及倒班员工的提神需求。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>学校与高校</h4>
+                            <p>校园内自助饮品站，减轻食堂压力，丰富校园生活。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>便利店与超市</h4>
+                            <p>作为增值服务项目，增加非食品类收入来源。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>交通枢纽</h4>
+                            <p>机场、火车站、地铁站内，为旅客提供便捷饮品。</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item">
+                        <div class="check-icon">✓</div>
+                        <div>
+                            <h4>酒店与会所</h4>
+                            <p>大堂自助服务区，提升住客体验。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <div class="guide-container">
+                    <div class="guide-content">
+                        <h2>如何挑选合适的投币咖啡机？</h2>
+                        <p>市面上的商用咖啡机种类繁多，选购时需重点关注以下参数，以确保投资回报率：</p>
+                        <ul>
+                            <li><strong>出杯量与速度：</strong> 根据预计人流量选择，高峰期能否满足快速出杯需求。</li>
+                            <li><strong>咖啡类型：</strong> 确认是否支持美式、拿铁、卡布奇诺等多种花式咖啡。</li>
+                            <li><strong>清洁维护：</strong> 选择模块化设计，便于拆洗水箱和研磨器，延长使用寿命。</li>
+                            <li><strong>支付方式：</strong> 确认是否支持主流的移动支付及投币功能。</li>
+                            <li><strong>售后服务：</strong> 了解厂商的保修政策、维修响应速度及耗材供应渠道。</li>
+                        </ul>
+                    </div>
+                    <div class="guide-image">
+                        <span>[设备示意图：商用全自动咖啡机]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-subtitle">关于投币咖啡机运营与使用的疑问，这里都有答案。</p>
+                
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">投币咖啡机支持哪些支付方式？</div>
+                        <div class="faq-answer">现代投币咖啡机通常集成了多种支付系统，除了传统的硬币识别外，还普遍支持微信支付、支付宝扫码以及银行卡刷卡功能，部分高端机型还支持人脸识别。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">咖啡机需要专人看管吗？</div>
+                        <div class="faq-answer">不需要。投币式咖啡机设计为全自动无人值守设备。机器内部有保温系统，用户自助操作即可完成购买，运营者只需定期检查库存和进行清洁维护。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">日常维护复杂吗？</div>
+                        <div class="faq-answer">日常维护相对简单。主要包括每日清洁出杯口和杯托、每周清洗水箱和咖啡渣盒、定期检查电源线路及水位。大多数机型都设计了易于拆卸的部件，无需专业工具。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">购买一台机器多久能回本？</div>
+                        <div class="faq-answer">回本周期取决于放置场所的人流量、咖啡单价以及机器的出杯量。一般来说，在人流密集的商业区或办公楼，每天出杯量达到100杯以上，半年至一年内可收回设备成本。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="hero" style="padding: 40px 0; background-color: var(--secondary-color);">
+            <div class="container" style="color: white;">
+                <h2 style="margin-bottom: 15px;">准备好提升您的场所服务了吗？</h2>
+                <p style="margin-bottom: 25px; opacity: 0.9;">立即联系我们，获取免费设备演示与定制化运营方案。</p>
+                <a href="#contact" class="cta-btn" style="background-color: white; color: var(--primary-color);">联系咨询</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">专注商用自动售货设备研发与销售十年，致力于为各类场所提供高效、智能的饮品解决方案。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#features">核心优势</a></li>
+                        <li><a href="#scenarios">应用场景</a></li>
+                        <li><a href="#guide">选购指南</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：contact@example.com</li>
+                        <li>地址：北京市朝阳区科技园区88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 投币式咖啡机服务网. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
