@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="古墓丽影攻略网 - 提供古墓丽影系列全游戏通关攻略、古墓探险路线图解、BOSS战技巧、收集品位置及存档下载，助你完美通关。">
+    <meta name="keywords" content="古墓丽影攻略,古墓丽影,古墓丽影9,古墓丽影崛起,古墓丽影暗影,通关攻略,BOSS战,存档">
+    <title>古墓丽影攻略-全系列通关指南与探险秘籍</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d4a373;
+            --secondary-color: #faedcd;
+            --accent-color: #e07a5f;
+            --text-dark: #2f3e46;
+            --text-light: #fefae0;
+            --bg-dark: #1b262c;
+            --bg-card: #3d5a80;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-dark);
+            background-image: radial-gradient(circle at 10% 20%, #1b262c 0%, #3d5a80 100%);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(27, 38, 44, 0.95);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: 1px solid var(--secondary-color);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            outline: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/tombraider/1920/600') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #c05644;
+            transform: translateY(-2px);
+        }
+
+        /* Game Series Tabs */
+        .series-nav {
+            background: var(--bg-card);
+            padding: 1rem 0;
+            margin-top: -20px;
+            position: relative;
+            z-index: 10;
+            border-radius: 8px;
+        }
+
+        .series-list {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .series-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--text-light);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .series-btn.active, .series-btn:hover {
+            background: var(--primary-color);
+            color: var(--bg-dark);
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .card {
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Feature Section */
+        .features {
+            background-color: rgba(0,0,0,0.2);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-item h3 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Guide Detail Area (Simulated) */
+        .guide-section {
+            padding: 3rem 0;
+        }
+
+        .guide-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .guide-content h2 {
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-step {
+            margin-bottom: 2rem;
+        }
+
+        .guide-step h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .guide-step p {
+            color: #ccc;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-box {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .checklist li {
+            margin-bottom: 0.5rem;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0d1317;
+            color: #888;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>🪨</span> 古墓丽影攻略网
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#guides">攻略指南</a></li>
+                    <li><a href="#bosses">BOSS战</a></li>
+                    <li><a href="#collectibles">收集品</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索攻略...">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>穿越千年古墓，征服极限挑战</h1>
+            <p>为您提供《古墓丽影：暗影》、《崛起》、《9代》等全系列深度攻略，包含全古墓通关路线、BOSS战斗技巧及生存资源管理指南。</p>
+            <a href="#guides" class="btn">开始探险</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="series-nav">
+            <div class="series-list">
+                <button class="series-btn active">古墓丽影9</button>
+                <button class="series-btn">古墓丽影崛起</button>
+                <button class="series-btn">古墓丽影暗影</button>
+                <button class="series-btn">古墓丽影 Legend</button>
+                <button class="series-btn">古墓丽影 Underworld</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <h2 class="section-title">最新攻略资讯</h2>
+        
+        <div class="content-grid">
+            <article class="card">
+                <img src="https://picsum.photos/seed/tomb1/400/250" alt="古墓丽影9攻略封面" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">核心古墓</span>
+                    <h3 class="card-title">古墓丽影9：第11关“鱼骨之墓”完美通关指南</h3>
+                    <p class="card-desc">本关重点在于利用滑索和液压机控制水流。详细解析如何获取“龙骨”收集品以及避开机关陷阱的路线规划。</p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://picsum.photos/seed/tomb2/400/250" alt="古墓丽影崛起攻略封面" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">生存技巧</span>
+                    <h3 class="card-title">古墓丽影崛起：泰坦遗迹生存资源管理全解析</h3>
+                    <p class="card-desc">在极寒环境中生存是本作难点。分享如何高效收集木材和石材，以及利用篝火延长生存时间的关键技巧。</p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="https://picsum.photos/seed/tomb3/400/250" alt="古墓丽影暗影攻略封面" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">全收集</span>
+                    <h3 class="card-title">古墓丽影暗影：玛雅神庙全图鉴收集品位置图解</h3>
+                    <p class="card-desc">包含所有玛雅文物、地图碎片及古代遗物。附赠隐藏宝箱的精准坐标，助您达成100%完成度。</p>
+                    <a href="#" class="read-more">阅读全文 →</a>
+                </div>
+            </article>
+        </div>
+
+        <section id="guides" class="guide-section">
+            <h2 class="section-title">热门攻略专题</h2>
+            <div class="guide-container">
+                <div class="guide-content">
+                    <article class="guide-step">
+                        <h3>1. 前期装备升级路线</h3>
+                        <p>游戏初期资源有限，建议优先升级弓箭的“穿透”属性和护甲的“韧性”。不要过早将点数浪费在魔法技能上，物理攻击在前期更稳定。</p>
+                    </article>
+                    <article class="guide-step">
+                        <h3>2. 关键古墓：圣殿之门</h3>
+                        <p>进入古墓后，首先转动中央石柱。注意观察墙壁上的光影变化，当光线对齐时，旁边的石门才会开启。利用滑索快速到达上层平台是关键。</p>
+                    </article>
+                    <article class="guide-step">
+                        <h3>3. 突发战斗应对</h3>
+                        <p>遭遇伏击时，第一时间寻找掩体。使用闪光弹可以打断敌人的攻击节奏，为拉近距离创造机会。不要贪刀，保持移动是生存法则。</p>
+                    </article>
+                    <article class="guide-step">
+                        <h3>4. 逃离陷阱技巧</h3>
+                        <p>面对落石陷阱，学会利用“攀爬”动作在墙壁上躲避。面对滚石陷阱，迅速侧身翻滚。记住，反应速度比装备更重要。</p>
+                    </article>
+                </div>
+                
+                <aside>
+                    <div class="sidebar-box">
+                        <h4 class="sidebar-title">通关必备清单</h4>
+                        <ul class="checklist">
+                            <li>带足急救药包</li>
+                            <li>升级弓箭附魔</li>
+                            <li>收集所有图鉴</li>
+                            <li>解锁全部技能</li>
+                            <li>保存关键存档</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-box">
+                        <h4 class="sidebar-title">常用技能加点</h4>
+                        <p style="color:#ccc; font-size:0.9rem; margin-bottom:0.5rem;">核心输出流：</p>
+                        <ul class="checklist">
+                            <li>箭矢附魔 (火焰/穿透)</li>
+                            <li>箭矢装填速度</li>
+                            <li>闪避冷却缩减</li>
+                            <li>攀爬速度提升</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section id="bosses" class="guide-section">
+            <h2 class="section-title">BOSS战击杀指南</h2>
+            <div class="content-grid">
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">BOSS战</span>
+                        <h3 class="card-title">战神阿瑞斯：弱点与攻击模式</h3>
+                        <p class="card-desc">阿瑞斯拥有强大的物理攻击力，但头部和肩膀是主要弱点。战斗中需利用场景中的石柱作为掩体，待其蓄力时进行反击。</p>
+                        <a href="#" class="read-more">查看详细打法 →</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-body">
+                        <span class="card-tag">BOSS战</span>
+                        <h3 class="card-title">双头巨蛇：远程压制战术</h3>
+                        <p class="card-desc">面对飞行单位，保持中距离战斗。利用弓箭射击其双翼使其坠落，随后迅速上前造成伤害。注意躲避地面毒液喷吐。</p>
+                        <a href="#" class="read-more">查看详细打法 →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i>🗺️</i>
+                        <h3>全图鉴导航</h3>
+                        <p>精确到坐标的收集品位置，告别遗漏。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i>🛡️</i>
+                        <h3>防坑指南</h3>
+                        <p>总结玩家常见误区，助你少走弯路。</p>
+                    </div>
+                    <div class="feature-item">
+                        <i>💾</i>
+                        <h3>存档下载</h3>
+                        <p>提供关键节点完美存档，随时回溯。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size:0.9rem; line-height:1.6;">
+                        本站专注于《古墓丽影》系列游戏的攻略分享。我们致力于为玩家提供最准确、最详细的通关指引和生存技巧。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">古墓丽影9攻略</a></li>
+                        <li><a href="#">崛起全收集</a></li>
+                        <li><a href="#">暗影通关流程</a></li>
+                        <li><a href="#">MOD下载中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系与帮助</h4>
+                    <ul>
+                        <li><a href="#">提交Bug反馈</a></li>
+                        <li><a href="#">攻略投稿</a></li>
+                        <li><a href="#">网站地图</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 古墓丽影攻略网 版权所有 | 本站内容仅供学习交流使用，游戏版权归开发商所有。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
