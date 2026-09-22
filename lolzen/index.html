@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LOL怎么举报？本指南详细提供游戏内举报方法、举报流程、有效证据收集技巧以及违规查询途径，帮助玩家维护良好的游戏环境。">
+    <meta name="keywords" content="LOL怎么举报,英雄联盟举报,游戏违规,客服反馈,战绩查询">
+    <title>LOL怎么举报-英雄联盟违规处理与反馈指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #c62828;
+            --secondary-accent: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: color 0.2s; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span { color: var(--secondary-accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--secondary-accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: var(--secondary-accent);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main { padding: 60px 0; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Guide Grid */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .guide-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: box-shadow 0.3s;
+        }
+
+        .guide-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: #eff6ff;
+            color: var(--secondary-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .guide-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .guide-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Detailed Steps */
+        .steps-section {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            margin-bottom: 80px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .step-list {
+            counter-reset: step;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .step-item:last-child { margin-bottom: 0; }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1.1rem;
+        }
+
+        .step-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+        }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question:hover { background-color: #f8fafc; }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-secondary);
+            background-color: #fcfcfc;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+            .steps-section { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 游戏指南
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">举报指南</a>
+                <a href="#">违规查询</a>
+                <a href="#">常见问题</a>
+                <a href="#">联系客服</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>LOL怎么举报</h1>
+            <p>遇到挂机、谩骂或恶意干扰游戏的行为？掌握正确的举报方法，维护您的游戏体验和公平竞技环境。</p>
+            <a href="#guide" class="btn">查看详细教程</a>
+        </div>
+    </section>
+
+    <main class="container" id="guide">
+        
+        <div class="section-title">
+            <h2>核心举报渠道</h2>
+            <p>游戏内举报是最直接有效的方式，请根据违规类型选择对应的入口。</p>
+        </div>
+
+        <div class="guide-grid">
+            <article class="guide-card">
+                <div class="icon-box">💬</div>
+                <h3>聊天框举报</h3>
+                <p>在游戏内的聊天频道（如世界频道、好友聊天）中，直接点击违规玩家的名字，选择“举报”选项。这是处理语言谩骂、辱骂等行为的主要途径。</p>
+            </article>
+
+            <article class="guide-card">
+                <div class="icon-box">🚫</div>
+                <h3>违规行为举报</h3>
+                <p>在游戏结算界面或生涯面板中，选择“举报”。针对挂机、送人头、故意破坏团队节奏等行为，系统会引导您选择具体违规类型。</p>
+            </article>
+
+            <article class="guide-card">
+                <div class="icon-box">📸</div>
+                <h3>上传证据举报</h3>
+                <p>对于无法通过游戏内举报处理的严重违规（如开挂、使用外挂软件），建议在游戏外通过“英雄联盟客户端-反馈中心”上传录像截图或违规证据。</p>
+            </article>
+        </div>
+
+        <div class="steps-section">
+            <h2 style="margin-bottom: 30px; text-align: center; color: var(--primary-color);">详细操作步骤</h2>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>进入游戏结算界面</h4>
+                        <p>在游戏结束后，无论胜负，系统都会弹出结算面板。请点击“举报”按钮，或通过生涯/个人资料进入举报中心。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>选择违规类型</h4>
+                        <p>在弹出的举报选项中，勾选对应的违规标签（如：消极比赛、言语辱骂、恶意干扰）。系统支持多选。</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>提交反馈</h4>
+                        <p>确认无误后点击提交。如果是针对特定玩家的语言辱骂，也可以在战斗中直接点击名字进行举报。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>常见问题解答</h2>
+            <p>关于LOL举报的常见疑问与解答。</p>
+        </div>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question">举报后多久有结果？<span class="faq-icon">▼</span></div>
+                <div class="faq-answer">
+                    游戏内举报通常由AI系统进行初步筛查，部分案件会由人工审核。违规处理结果通常在游戏结束后数小时至数天内更新，严重违规可能需要更长时间。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">被举报后会被封号吗？<span class="faq-icon">▼</span></div>
+                <div class="faq-answer">
+                    是的。根据违规行为的严重程度，系统会给予相应的处罚，包括禁言（聊天频道屏蔽）、扣除信誉积分、禁玩排位赛以及永久封号。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何查询自己的违规记录？<span class="faq-icon">▼</span></div>
+                <div class="faq-answer">
+                    您可以在游戏客户端的“生涯”或“个人资料”页面中找到“违规记录”或“战绩查询”入口，查看历史处罚详情。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">举报不公正怎么办？<span class="faq-icon">▼</span></div>
+                <div class="faq-answer">
+                    如果您认为自己的举报未经过正确处理，或者遭遇了恶意举报，请通过官方客服渠道提交申诉材料，提供详细的录像和证据。
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>举报指南</h4>
+                    <ul>
+                        <li><a href="#">挂机举报流程</a></li>
+                        <li><a href="#">语言辱骂处理</a></li>
+                        <li><a href="#">开挂检测与举报</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>违规查询</h4>
+                    <ul>
+                        <li><a href="#">信誉积分查询</a></li>
+                        <li><a href="#">历史处罚记录</a></li>
+                        <li><a href="#">申诉入口</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客服支持</h4>
+                    <ul>
+                        <li><a href="#">联系官方客服</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">服务条款</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>本网站为第三方游戏资讯与攻略平台，非官方网站。所有商标归其各自所有者所有。</p>
+                <p>&copy; 2023 游戏指南网. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion Logic
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
