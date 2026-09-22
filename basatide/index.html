@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>芭萨提的颜色 - 色彩美学与搭配灵感指南</title>
+    <meta name="description" content="芭萨提的颜色网站，提供丰富的色彩搭配灵感、色卡参考与家居/服装配色方案，助您发现生活中的色彩美学。">
+    <meta name="keywords" content="芭萨提的颜色,色彩搭配,色卡,家居配色,服装色彩,色彩美学">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --accent-color: #ff6b6b;
+            --accent-hover: #fa5252;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+            --spacing-unit: 1rem;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #ddd;
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #fff0f0 0%, #f9f9f9 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(45deg, #333, #666);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .hero-circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            filter: blur(40px);
+            animation: float 10s infinite ease-in-out;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background-color: #ff6b6b;
+            top: -50px;
+            left: -50px;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            background-color: #4ecdc4;
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 50px); }
+        }
+
+        /* 分类网格 */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-preview {
+            height: 180px;
+            position: relative;
+        }
+
+        .color-preview::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .color-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            background-color: #f0f0f0;
+            color: #555;
+        }
+
+        /* 色彩趋势 */
+        .trend-section {
+            background-color: #fff;
+        }
+
+        .trend-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .trend-item {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: var(--bg-color);
+            padding: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        .trend-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .trend-image {
+            flex: 1;
+            height: 300px;
+            border-radius: var(--border-radius);
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .trend-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .trend-item:hover .trend-image img {
+            transform: scale(1.05);
+        }
+
+        .trend-info {
+            flex: 1;
+        }
+
+        .trend-info .season {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .trend-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .trend-info p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+        }
+
+        /* 色卡展示 */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .palette-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .palette-strip {
+            display: flex;
+            height: 80px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .palette-strip div {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: bold;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .palette-name {
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            background-color: #fff;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+            padding-right: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            nav ul {
+                display: none; /* 移动端简化：隐藏菜单 */
+            }
+
+            .header-actions {
+                display: none;
+            }
+
+            .trend-item, .trend-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .trend-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            .palette-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span></span>
+                芭萨提的颜色
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#palette">色卡库</a></li>
+                    <li><a href="#trend">流行趋势</a></li>
+                    <li><a href="#guide">搭配指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-circles">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+            <div class="container hero-content">
+                <h1>探索生活中的<br>每一种色彩美学</h1>
+                <p>芭萨提的颜色致力于为您提供专业的色彩灵感、实用的配色方案以及前沿的时尚色彩趋势，让您的创意与生活更加多彩。</p>
+                <div style="display: flex; justify-content: center; gap: 15px;">
+                    <button class="btn btn-primary">浏览色卡</button>
+                    <button class="btn btn-outline">下载配色工具</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="section" id="palette">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>色彩分类灵感</h2>
+                        <p>按场景与风格查找适合您的色彩组合</p>
+                    </div>
+                    <a href="#" style="color: var(--accent-color); font-weight: 600;">查看全部 &rarr;</a>
+                </div>
+                <div class="category-grid">
+                    <article class="category-card">
+                        <div class="color-preview" style="background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);">
+                            <div class="card-content">
+                                <h3>家居软装</h3>
+                                <p>营造温馨舒适的居住环境，从墙面到家具的温柔过渡。</p>
+                                <div class="color-tags">
+                                    <span class="tag">莫兰迪</span>
+                                    <span class="tag">奶油色</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="category-card">
+                        <div class="color-preview" style="background: linear-gradient(to right, #a18cd1 0%, #fbc2eb 100%);">
+                            <div class="card-content">
+                                <h3>时尚穿搭</h3>
+                                <p>街头潮流与优雅气质的碰撞，掌握当季流行色穿搭技巧。</p>
+                                <div class="color-tags">
+                                    <span class="tag">复古</span>
+                                    <span class="tag">街头</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="category-card">
+                        <div class="color-preview" style="background: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);">
+                            <div class="card-content">
+                                <h3>自然风光</h3>
+                                <p>还原大自然最纯粹的色调，从森林绿到海洋蓝。</p>
+                                <div class="color-tags">
+                                    <span class="tag">清新</span>
+                                    <span class="tag">治愈</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="category-card">
+                        <div class="color-preview" style="background: linear-gradient(to right, #fccb90 0%, #d57eeb 100%);">
+                            <div class="card-content">
+                                <h3>商务办公</h3>
+                                <p>专业、冷静且高效的色彩选择，提升工作效率与品牌形象。</p>
+                                <div class="color-tags">
+                                    <span class="tag">极简</span>
+                                    <span class="tag">商务</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trend Section -->
+        <section class="section trend-section" id="trend">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>年度流行趋势</h2>
+                        <p>紧跟国际色彩协会发布的年度色彩风向标</p>
+                    </div>
+                </div>
+                <div class="trend-container">
+                    <div class="trend-item">
+                        <div class="trend-image">
+                            <img src="https://picsum.photos/seed/fashion1/600/400.jpg" alt="流行趋势展示图">
+                        </div>
+                        <div class="trend-info">
+                            <span class="season">2024 夏季流行</span>
+                            <h3>海盐与薄荷的清新碰撞</h3>
+                            <p>随着气温升高，低饱和度的冷色调成为主流。海盐灰与薄荷绿的结合，不仅带来视觉上的降温效果，更传递出一种自由与放松的生活态度。适合夏季服装、家居布艺及数字界面设计。</p>
+                            <a href="#" class="btn btn-outline">阅读详细分析</a>
+                        </div>
+                    </div>
+                    <div class="trend-item">
+                        <div class="trend-image">
+                            <img src="https://picsum.photos/seed/arch/600/400.jpg" alt="室内设计趋势">
+                        </div>
+                        <div class="trend-info">
+                            <span class="season">2024 室内设计</span>
+                            <h3>复古泥土色的回归</h3>
+                            <p>受极简主义向复古风潮转变的影响，带有泥土质感的暖色调重新占据舞台。焦糖色、赤陶色与深橄榄绿的搭配，为现代空间增添了温暖的历史厚重感与触感。</p>
+                            <a href="#" class="btn btn-outline">阅读详细分析</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Palette Tools -->
+        <section class="section" id="guide">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>实用配色工具</h2>
+                        <p>一键提取色值，生成专业色板</p>
+                    </div>
+                </div>
+                <div class="palette-grid">
+                    <div class="palette-card">
+                        <div class="palette-strip">
+                            <div style="background-color: #2C3E50;">#2C3E50</div>
+                            <div style="background-color: #E74C3C;">#E74C3C</div>
+                            <div style="background-color: #ECF0F1;">#ECF0F1</div>
+                            <div style="background-color: #3498DB;">#3498DB</div>
+                        </div>
+                        <div class="palette-name">经典商务蓝</div>
+                    </div>
+                    <div class="palette-card">
+                        <div class="palette-strip">
+                            <div style="background-color: #FAD0C4;">#FAD0C4</div>
+                            <div style="background-color: #FFD1FF;">#FFD1FF</div>
+                            <div style="background-color: #CBF3F0;">#CBF3F0</div>
+                            <div style="background-color: #A2D2FF;">#A2D2FF</div>
+                        </div>
+                        <div class="palette-name">梦幻糖果</div>
+                    </div>
+                    <div class="palette-card">
+                        <div class="palette-strip">
+                            <div style="background-color: #264653;">#264653</div>
+                            <div style="background-color: #2A9D8F;">#2A9D8F</div>
+                            <div style="background-color: #E9C46A;">#E9C46A</div>
+                            <div style="background-color: #F4A261;">#F4A261</div>
+                            <div style="background-color: #E76F51;">#E76F51</div>
+                        </div>
+                        <div class="palette-name">落日山脉</div>
+                    </div>
+                    <div class="palette-card">
+                        <div class="palette-strip">
+                            <div style="background-color: #111111;">#111111</div>
+                            <div style="background-color: #333333;">#333333</div>
+                            <div style="background-color: #555555;">#555555</div>
+                            <div style="background-color: #777777;">#777777</div>
+                            <div style="background-color: #999999;">#999999</div>
+                        </div>
+                        <div class="palette-name">高级灰阶</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-title">
+                        <h2>常见问题</h2>
+                        <p>关于色彩搭配与芭萨提的解答</p>
+                    </div>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">什么是色盲友好配色？</div>
+                        <div class="faq-answer">
+                            色盲友好配色是指考虑到色弱或色盲人群的视觉感知，使用高对比度且不依赖单一颜色区分信息的配色方案。芭萨提的颜色提供多种色盲测试模式。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何选择适合我的主色调？</div>
+                        <div class="faq-answer">
+                            选择主色调时，建议结合您的生活环境、个人喜好以及使用场景。例如，卧室适合暖色调营造温馨感，而书房则适合冷色调提高专注力。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">网站支持导出色卡吗？</div>
+                        <div class="faq-answer">
+                            是的，我们支持将生成的色卡以图片或PDF格式导出，方便您在设计软件或打印材料中使用。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于芭萨提</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">芭萨提的颜色是一个专注于色彩美学分享的平台，旨在帮助设计师、艺术家及普通用户发现色彩的无限可能。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">热门色卡</a></li>
+                        <li><a href="#">色彩心理学</a></li>
+                        <li><a href="#">配色工具</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源中心</h4>
+                    <ul>
+                        <li><a href="#">设计教程</a></li>
+                        <li><a href="#">色盲测试</a></li>
+                        <li><a href="#">色彩术语表</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅更新</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 10px;">获取每周色彩趋势推送</p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="您的邮箱" style="padding: 8px; border: none; border-radius: 4px 0 0 4px; width: 100%;">
+                        <button style="padding: 8px 12px; background: var(--accent-color); border: none; color: white; border-radius: 0 4px 4px 0; cursor: pointer;">Go</button>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 芭萨提的颜色. All Rights Reserved. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互逻辑
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // 关闭其他已打开的项
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // 切换当前项
+                    item.classList.toggle('active');
+                });
+            });
+
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                  </html>
